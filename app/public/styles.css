@@ -1,4 +1,4 @@
-/* VendorQuote Corporate Styles */
+/* VendorQuote Corporate Styles - CrowdStrike Theme */
 
 * {
   margin: 0;
@@ -8,16 +8,17 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #000000;
+  color: #e1e1e1;
   line-height: 1.6;
 }
 
 .header {
-  background-color: #2c3e50;
+  background-color: #111111;
   color: white;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(232, 27, 35, 0.3);
+  border-bottom: 2px solid #e81b23;
 }
 
 .header-content {
@@ -31,23 +32,24 @@ body {
 .header h1 {
   font-size: 1.5rem;
   font-weight: 600;
+  color: #e81b23;
 }
 
 .header-subtitle {
   font-size: 0.9rem;
-  color: #95a5a6;
+  color: #999999;
   margin-top: 0.25rem;
 }
 
 .user-info {
   font-size: 0.85rem;
-  color: #bdc3c7;
+  color: #cccccc;
 }
 
 .nav {
-  background-color: #34495e;
+  background-color: #1a1a1a;
   padding: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .nav ul {
@@ -64,18 +66,23 @@ body {
 .nav a {
   display: block;
   padding: 1rem 1.5rem;
-  color: #ecf0f1;
+  color: #e1e1e1;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
 }
 
 .nav a:hover {
-  background-color: #2c3e50;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-bottom-color: #e81b23;
 }
 
 .nav a.active {
-  background-color: #1abc9c;
+  background-color: #2a2a2a;
+  color: #e81b23;
   font-weight: 600;
+  border-bottom-color: #e81b23;
 }
 
 .container {
@@ -85,19 +92,24 @@ body {
 }
 
 .card {
-  background: white;
+  background: #1a1a1a;
   border-radius: 8px;
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(232, 27, 35, 0.2);
+  border: 1px solid #2a2a2a;
 }
 
 .card h2 {
-  color: #2c3e50;
+  color: #e81b23;
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  border-bottom: 2px solid #1abc9c;
+  border-bottom: 2px solid #e81b23;
   padding-bottom: 0.5rem;
+}
+
+.card p {
+  color: #cccccc;
 }
 
 .dashboard-grid {
@@ -108,25 +120,27 @@ body {
 }
 
 .dashboard-card {
-  background: white;
+  background: #1a1a1a;
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(232, 27, 35, 0.2);
+  border: 1px solid #2a2a2a;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .dashboard-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(232, 27, 35, 0.4);
+  border-color: #e81b23;
 }
 
 .dashboard-card h3 {
-  color: #2c3e50;
+  color: #e81b23;
   margin-bottom: 0.5rem;
 }
 
 .dashboard-card p {
-  color: #7f8c8d;
+  color: #999999;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -134,26 +148,30 @@ body {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #1abc9c;
+  background-color: #e81b23;
   color: white;
   text-decoration: none;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  font-weight: 600;
 }
 
 .btn:hover {
-  background-color: #16a085;
+  background-color: #c41620;
+  box-shadow: 0 2px 8px rgba(232, 27, 35, 0.5);
 }
 
 .btn-secondary {
-  background-color: #3498db;
+  background-color: #333333;
+  border: 1px solid #666666;
 }
 
 .btn-secondary:hover {
-  background-color: #2980b9;
+  background-color: #444444;
+  border-color: #e81b23;
 }
 
 table {
@@ -163,20 +181,30 @@ table {
 }
 
 table th {
-  background-color: #34495e;
-  color: white;
+  background-color: #2a2a2a;
+  color: #e81b23;
   padding: 0.75rem;
   text-align: left;
   font-weight: 600;
+  border-bottom: 2px solid #e81b23;
 }
 
 table td {
   padding: 0.75rem;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid #333333;
+  color: #cccccc;
 }
 
 table tr:hover {
-  background-color: #f8f9fa;
+  background-color: #222222;
+}
+
+table code {
+  background-color: #2a2a2a;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  color: #e81b23;
+  font-family: 'Courier New', monospace;
 }
 
 .status-badge {
@@ -188,18 +216,21 @@ table tr:hover {
 }
 
 .status-approved {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: #1a3a1a;
+  color: #4ade80;
+  border: 1px solid #4ade80;
 }
 
 .status-pending {
-  background-color: #fff3cd;
-  color: #856404;
+  background-color: #3a3a1a;
+  color: #fbbf24;
+  border: 1px solid #fbbf24;
 }
 
 .status-rejected {
-  background-color: #f8d7da;
-  color: #721c24;
+  background-color: #3a1a1a;
+  color: #f87171;
+  border: 1px solid #f87171;
 }
 
 .form-group {
@@ -209,7 +240,7 @@ table tr:hover {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #2c3e50;
+  color: #e81b23;
   font-weight: 600;
 }
 
@@ -217,34 +248,58 @@ table tr:hover {
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid #333333;
   border-radius: 4px;
   font-family: inherit;
   font-size: 0.9rem;
+  background-color: #2a2a2a;
+  color: #e1e1e1;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e81b23;
+  box-shadow: 0 0 0 2px rgba(232, 27, 35, 0.2);
 }
 
 .form-group textarea {
   min-height: 100px;
   resize: vertical;
+  font-family: 'Courier New', monospace;
 }
 
 .alert {
   padding: 1rem;
   border-radius: 4px;
   margin-bottom: 1rem;
+  border: 1px solid;
 }
 
 .alert-info {
-  background-color: #d1ecf1;
-  color: #0c5460;
-  border: 1px solid #bee5eb;
+  background-color: #1a2a3a;
+  color: #60a5fa;
+  border-color: #3b82f6;
 }
 
 .footer {
-  background-color: #2c3e50;
-  color: #95a5a6;
+  background-color: #111111;
+  color: #666666;
   text-align: center;
   padding: 1.5rem;
   margin-top: 4rem;
   font-size: 0.85rem;
+  border-top: 2px solid #e81b23;
+}
+
+pre {
+  background: #2a2a2a !important;
+  padding: 1rem !important;
+  border-radius: 4px !important;
+  overflow-x: auto !important;
+  font-size: 0.85rem !important;
+  border: 1px solid #e81b23 !important;
+  color: #4ade80 !important;
+  font-family: 'Courier New', monospace !important;
 }

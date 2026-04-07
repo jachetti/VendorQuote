@@ -11,6 +11,10 @@
 > It contains deliberate security vulnerabilities and should **NEVER** be deployed in production.
 > See [SECURITY.md](SECURITY.md) for details on intentional vulnerabilities.
 
+## 🚀 **[Start the Attack Lab →](ATTACK_LAB.md)**
+
+**New to this lab?** Jump straight to the comprehensive attack guide with step-by-step exploitation from both Windows contractor and Kali Linux attacker perspectives.
+
 ## 🎓 Overview
 
 **VendorQuote** is a fictional internal procurement pricing portal designed to demonstrate container security concepts including:
