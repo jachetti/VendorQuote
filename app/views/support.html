@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Diagnostics - VendorQuote</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div>
+        <h1>VendorQuote</h1>
+        <div class="header-subtitle">Procurement Pricing Portal</div>
+      </div>
+      <div class="user-info">
+        Signed in as: <strong>contractor-jdoe</strong>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="/">Dashboard</a></li>
+      <li><a href="/quotes">Quotes</a></li>
+      <li><a href="/approvals">Approvals</a></li>
+      <li><a href="/support" class="active">Support</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h2>Support Diagnostic Tools</h2>
+      <p>Run diagnostic checks and generate support notes for troubleshooting.</p>
+
+      <div class="alert alert-info">
+        <strong>Support Note Parser:</strong> Enter diagnostic notes below. The system will parse and execute diagnostic commands to help troubleshoot issues.
+      </div>
+
+      <form id="diagForm">
+        <div class="form-group">
+          <label for="diagNote">Diagnostic Note</label>
+          <textarea
+            id="diagNote"
+            name="note"
+            placeholder="Enter diagnostic commands or notes..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn">Run Diagnostic</button>
+      </form>
+
+      <div id="output" style="display: none; margin-top: 2rem;">
+        <h3>Diagnostic Output</h3>
+        <pre id="outputContent" style="background: #f8f9fa; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; border: 1px solid #dee2e6;"></pre>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Common Diagnostic Commands</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>hostname</code></td>
+            <td>Display system hostname</td>
+          </tr>
+          <tr>
+            <td><code>whoami</code></td>
+            <td>Show current user context</td>
+          </tr>
+          <tr>
+            <td><code>env</code></td>
+            <td>Display environment variables</td>
+          </tr>
+          <tr>
+            <td><code>df -h</code></td>
+            <td>Check disk space usage</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="footer">
+    VendorQuote Internal System &copy; 2026 | For authorized procurement staff only
+  </footer>
+
+  <script>
+    document.getElementById('diagForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const note = document.getElementById('diagNote').value;
+      const outputDiv = document.getElementById('output');
+      const outputContent = document.getElementById('outputContent');
+
+      try {
+        const response = await fetch('/api/support/diag', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ note })
+        });
+
+        const result = await response.json();
+
+        outputContent.textContent = result.output || result.error || 'No output';
+        outputDiv.style.display = 'block';
+      } catch (error) {
+        outputContent.textContent = 'Error: ' + error.message;
+        outputDiv.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

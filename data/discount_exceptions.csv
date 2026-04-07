@@ -1,0 +1,6 @@
+request_id,vendor,requested_by,justification,approver,status
+EXC-2026-001,CloudHost LLC,sarah.chen@vendorquote.internal,Multi-year commitment discount over policy threshold,mike.rodriguez@vendorquote.internal,pending
+EXC-2026-002,DevTools United,james.wilson@vendorquote.internal,Strategic vendor partnership for Q3 developer tooling,lisa.thompson@vendorquote.internal,approved
+EXC-2026-003,ServerHub Global,contractor-jdoe,Vendor match override requested for emergency hardware replacement,mike.rodriguez@vendorquote.internal,rejected
+EXC-2026-004,TechSupply Inc,sarah.chen@vendorquote.internal,Q3 hardware refresh bulk pricing exception,lisa.thompson@vendorquote.internal,approved
+EXC-2026-005,Analytics Plus,james.wilson@vendorquote.internal,Department consolidation volume discount,mike.rodriguez@vendorquote.internal,approved

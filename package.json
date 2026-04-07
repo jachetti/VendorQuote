@@ -1,0 +1,14 @@
+{
+  "name": "vendorquote",
+  "version": "1.0.0",
+  "description": "Internal procurement pricing and quote approvals portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["procurement", "quotes", "internal"],
+  "author": "VendorQuote Internal Team",
+  "license": "UNLICENSED",
+  "dependencies": {}
+}

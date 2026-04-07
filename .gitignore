@@ -1,0 +1,28 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+.npm
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local dev
+.env.local
+.env.*.local
+
+# Docker
+.dockerignore
+
+# Test artifacts
+test-results/
+coverage/

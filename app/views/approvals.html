@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Approvals - VendorQuote</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div>
+        <h1>VendorQuote</h1>
+        <div class="header-subtitle">Procurement Pricing Portal</div>
+      </div>
+      <div class="user-info">
+        Signed in as: <strong>contractor-jdoe</strong>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="/">Dashboard</a></li>
+      <li><a href="/quotes">Quotes</a></li>
+      <li><a href="/approvals" class="active">Approvals</a></li>
+      <li><a href="/support">Support</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h2>Discount Exception Requests</h2>
+      <p>Exception requests requiring approval due to policy threshold exceedance or special circumstances.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Request ID</th>
+            <th>Vendor</th>
+            <th>Requested By</th>
+            <th>Justification</th>
+            <th>Approver</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>EXC-2026-001</td>
+            <td>CloudHost LLC</td>
+            <td>sarah.chen@vendorquote.internal</td>
+            <td>Multi-year commitment discount over policy threshold</td>
+            <td>mike.rodriguez@vendorquote.internal</td>
+            <td><span class="status-badge status-pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>EXC-2026-002</td>
+            <td>DevTools United</td>
+            <td>james.wilson@vendorquote.internal</td>
+            <td>Strategic vendor partnership for Q3 developer tooling</td>
+            <td>lisa.thompson@vendorquote.internal</td>
+            <td><span class="status-badge status-approved">Approved</span></td>
+          </tr>
+          <tr>
+            <td>EXC-2026-003</td>
+            <td>ServerHub Global</td>
+            <td>contractor-jdoe</td>
+            <td>Vendor match override requested for emergency hardware replacement</td>
+            <td>mike.rodriguez@vendorquote.internal</td>
+            <td><span class="status-badge status-rejected">Rejected</span></td>
+          </tr>
+          <tr>
+            <td>EXC-2026-004</td>
+            <td>TechSupply Inc</td>
+            <td>sarah.chen@vendorquote.internal</td>
+            <td>Q3 hardware refresh bulk pricing exception</td>
+            <td>lisa.thompson@vendorquote.internal</td>
+            <td><span class="status-badge status-approved">Approved</span></td>
+          </tr>
+          <tr>
+            <td>EXC-2026-005</td>
+            <td>Analytics Plus</td>
+            <td>james.wilson@vendorquote.internal</td>
+            <td>Department consolidation volume discount</td>
+            <td>mike.rodriguez@vendorquote.internal</td>
+            <td><span class="status-badge status-approved">Approved</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Approval Notes</h2>
+      <div class="alert alert-info">
+        <strong>Note:</strong> Exception requests from contractor accounts require additional finance review.
+        Policy threshold for automatic approval is 15% discount on purchases over $10,000.
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    VendorQuote Internal System &copy; 2026 | For authorized procurement staff only
+  </footer>
+</body>
+</html>

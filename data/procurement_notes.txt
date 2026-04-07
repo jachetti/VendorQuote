@@ -1,0 +1,27 @@
+VendorQuote Internal Procurement Notes
+======================================
+
+Q3 2026 Hardware Refresh
+- TechSupply Inc pricing under NDA until July 15
+- Do not share vendor quote model externally
+- Bulk discount applies only to orders over $50K
+
+Cloud Services Migration
+- CloudHost LLC proposal includes 3-year commitment
+- CFO approval required for multi-year contracts over $20K
+- Shared export service account still in use (security review pending)
+
+Contractor Access
+- Limited vendor read-only access expires Q4 2026
+- Contractor jdoe flagged for unusual discount exception request
+- Review all contractor approvals monthly
+
+Strategic Vendor Relationships
+- DevTools United partnership discount locked until December 2026
+- Analytics Plus exploring integration with internal BI platform
+- VoiceComm Systems telecom upgrade deferred to Q1 2027
+
+Security Reminders
+- Do not commit credentials to version control
+- Rotate service account keys quarterly
+- Procurement data classified as internal-only

@@ -1,0 +1,13 @@
+vendor,category,sku,base_price,proposed_discount,approved_discount,status
+TechSupply Inc,Hardware,TS-SRV-2400,12500.00,15%,12%,approved
+DataCorp Solutions,Software,DC-LIC-ENT,8900.00,20%,18%,approved
+NetGear Pro,Networking,NGP-SW-48P,3200.00,10%,10%,approved
+CloudHost LLC,Services,CH-YEAR-PREMIUM,24000.00,25%,20%,pending_review
+SecureVault Inc,Security,SV-FIREWALL-X,15600.00,18%,15%,approved
+OfficeMax Business,Supplies,OM-BULK-Q3,4500.00,12%,12%,approved
+ServerHub Global,Hardware,SH-RACK-42U,8900.00,22%,0%,rejected
+Analytics Plus,Software,AP-DASH-PRO,6700.00,17%,17%,approved
+PrintSolutions Co,Hardware,PS-MFP-COLOR,2800.00,8%,8%,approved
+DevTools United,Software,DT-IDE-TEAM,11200.00,30%,25%,pending_approval
+StorageKing Inc,Hardware,SK-NAS-16TB,19500.00,14%,14%,approved
+VoiceComm Systems,Telecom,VC-PBX-500U,32000.00,20%,18%,approved

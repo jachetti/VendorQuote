@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  vendorquote:
+    image: vendorquote:worstcase
+    container_name: vendorquote
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    # INTENTIONAL: No security options configured
+    # This allows the container to run with weak runtime posture
+    # - writable root filesystem
+    # - root process
+    # - no capability restrictions
