@@ -23,6 +23,89 @@ You are **John Doe**, a procurement contractor (username: `contractor-jdoe`) who
 
 ---
 
+## 🛠️ Lab Deployment
+
+### Option 1: Deploy on Your EC2/VM Instance
+
+**If Git is Available:**
+```bash
+git clone https://github.com/jachetti/VendorQuote.git
+cd VendorQuote
+./build.sh
+./run.sh
+```
+
+**If Git is NOT Available (Use wget):**
+```bash
+# Download the repository as a zip file
+wget https://github.com/jachetti/VendorQuote/archive/refs/heads/main.zip -O vendorquote.zip
+
+# Install unzip if needed
+sudo yum install unzip -y  # Amazon Linux/RHEL
+# OR
+sudo apt install unzip -y  # Ubuntu/Debian
+
+# Extract the files
+unzip vendorquote.zip
+
+# Navigate to the directory
+cd VendorQuote-main
+
+# Build and run the container
+./build.sh
+./run.sh
+```
+
+**Verify Deployment:**
+```bash
+# Check if container is running
+docker ps | grep vendorquote
+
+# Test the application
+curl http://localhost/healthz
+# Expected output: "ok"
+
+# Open in browser
+# Navigate to: http://[YOUR_SERVER_IP]
+```
+
+### Option 2: Quick Update (If Already Deployed)
+
+```bash
+# Stop and remove old container
+docker rm -f vendorquote
+
+# Remove old image
+docker rmi vendorquote:worstcase
+
+# Re-download latest version
+cd ~
+rm -rf VendorQuote-main
+wget https://github.com/jachetti/VendorQuote/archive/refs/heads/main.zip -O vendorquote.zip
+unzip -o vendorquote.zip
+cd VendorQuote-main
+
+# Build fresh (no cache)
+docker build --no-cache -t vendorquote:worstcase .
+
+# Run it
+./run.sh
+```
+
+### Prerequisites
+
+**Server Requirements:**
+- Docker installed and running
+- Port 80 available (or modify to use 8080)
+- At least 2GB RAM
+- 2GB free disk space
+
+**Attack Platform Requirements:**
+- **Windows Host:** Web browser, network access to target
+- **Kali Linux:** curl, netcat, nmap (standard Kali tools)
+
+---
+
 ## 🎯 Phase 1: Reconnaissance (100 points)
 
 ### Objective 1.1: Map the Application (30 points)
